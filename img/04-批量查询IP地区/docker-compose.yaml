@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  vue-ip:
+    image: ezxxy/vue-ip:latest
+    restart: always
+    ports:
+      - "7845:7840"                 # 7845 可以改成目前没有被占用且自己喜欢的端口号
+    environment:
+      - TOKEN=039b420ee02e2e        # TOKEN 改成自己 ipinfo.io 账号下的，
+      - WIDTH=70%                   # 自定义网页内容占据屏幕的宽度，看自己需要，不用改就行
+    container_name: ezxxy-vue-ip

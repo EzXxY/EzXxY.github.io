@@ -1,0 +1,1 @@
+docker run -d --restart=always -p 7845:7840 --name ezxxy-vue-ip -e "TOKEN=039b420ee02e2e" -e "WIDTH=70%" ezxxy/vue-ip:latest
