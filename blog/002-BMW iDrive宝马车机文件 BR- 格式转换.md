@@ -14,8 +14,8 @@
 
 > [!CAUTION]
 >
-> 1. 注意：默认选择的车机系统模式为 `NBT/NBT Evo`，若为 `CIC` 模式，请切换 iDrive 版本。
-> 2. 软件需要在 Windows 系统下具有 .NET Framework 4.7.2 运行时环境。
+> 1.  默认选择的车机系统模式为 `NBT/NBT Evo`，若为 `CIC` 模式，请切换 iDrive 版本。
+> 2.  软件需要在 Windows 系统下运行，且具有 .NET Framework ≥ 4.7.2 运行时环境。
 
 ## 二、编码原理
 
@@ -27,9 +27,9 @@
 >
 > ```c#
 > if (i < 0x20000) // 前 131072 字节 (128KB)
->   bytesOut[i] = (byte)(~bytesIn[i]);  // 取反
+>       bytesOut[i] = (byte)(~bytesIn[i]);  // 取反
 > else
->    bytesOut[i] = bytesIn[i];  // 保持原样
+>        bytesOut[i] = bytesIn[i];  // 保持原样
 > ```
 >
 >   - 只加密前128KB，后面的数据不变
